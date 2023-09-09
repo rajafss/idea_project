@@ -1,0 +1,78 @@
+<odoo>
+  <data>
+<!--     inherit view form from contacts module using the res.partner -->
+      <record id="custom_partner_view" model="ir.ui.view">
+            <field name="name">Custom Partner View</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+               
+                <data>
+                    <xpath expr="//field[@name='company_type']" position="before">
+                    <div>
+                        <h1>Entreprises enregistrées:
+                            <field name="nb_company" readonly="True"/>
+                        </h1>
+                    </div>
+                </xpath>
+<!--                    replace the name of societe to denomination -->
+                <xpath expr="//field[@name='name']" position="replace">
+                </xpath>
+<!--                    hide the 2 field of street-->
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='street2']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+<!--                    i want to set this field before address -->
+                <xpath expr="//span[@name='address_name']" position="before">
+                        <field name="name" string="Dénomination" attrs="{'invisible': [('is_company','=',False)]}" ></field>
+                        <field name="raisonS" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="juridique" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="responsable" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="civilite" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="secteur" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="activite" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="participant" attrs="{'invisible': [('is_company','=',False)]}"/>
+                </xpath>
+                    <xpath expr="//field[@name='zip']" position="attributes">
+                           <attribute name="invisible">1</attribute>
+                </xpath>
+                    <xpath expr="//field[@name='city']" position="attributes">
+                           <attribute name="invisible">1</attribute>
+                </xpath>
+                         <!--the type of field city in contacts is Char but i want show the list of the cities
+                         so i create a new model to add the cities  -->
+                    <xpath expr="//field[@name='state_id']" position="after">
+                        <field name="name_city" placeholder="Délégation"/>
+                    </xpath>
+                <xpath expr="//field[@name='website']" position="before">
+                           <field name="fax" widget="phone" attrs="{'invisible': [('is_company','=',False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='website']" position="after">
+                        <field name="regime" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="date" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="capital" attrs="{'invisible': [('is_company','=',False)]}"/>
+                        <field name="emploi" attrs="{'invisible': [('is_company','=',False)]}"/>
+                </xpath>
+                </data>
+            </field>
+      </record>
+      <!--   inherit list view (tree) and i replace some field   -->
+      <record id="res_partner_view" model="ir.ui.view">
+        <field name="name">Partner View</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <data>
+
+                <xpath expr="//field[@name='display_name']" position="replace"></xpath>
+                <xpath expr="//field[@name='phone']" position="before">
+                    <field name="display_name" string="Dénomination"/>
+                </xpath>
+            </data>
+        </field>
+      </record>
+  </data>
+</odoo>
