@@ -5,35 +5,49 @@ class Partner(models.Model):
     _inherit = 'res.partner'
 
 
-    denomenation = fields.Char(string="Dénomination",
-                               help="New help text for the Company Name field")
+    # name = fields.Char(string="Dénomination",
+    #                            help="New help text for the Company Name field")
     raisonS = fields.Char(string="Raison sociale")
     juridique = fields.Many2one('forme.juridique', string="Forme juridique")
     responsable = fields.Char( string="Premier responsable")
-    civilite = fields.Selection([('homme', 'Homme'), ('femme', 'Femme')], string='Civilité du promoteur')
+    civilite = fields.Many2one('res.partner.title', string='Civilité du promoteur')
     secteur = fields.Many2one('res.partner.industry')
-    activite = fields.Char(string = "Activité")
-    # email1 = fields.Char(string="email de siège")
-    # email2 = fields.Char(string = "email d\'usine")
-    # phone1 = fields.Char()
-    fax = fields.Char(string="Fax siege/usine")
-    regime = fields.Selection([('exportatrice', 'Totalement exportatrice'),
-                               ('non exportatrice ', 'Non Totalement exportatrice')],
+
+    email1 = fields.Char(string="email de siège")
+    email2 = fields.Char(string = "email d\'usine")
+    phone2 = fields.Char(string = "Téléphone usine")
+    phone1 = fields.Char( string="Téléphone siège ")
+    fax2 = fields.Char(string="Fax usine")
+    fax1 = fields.Char(string="Fax siège")
+
+    regime = fields.Many2one('regime.regime',
                                 string="Régime")
 
     participant = fields.Many2one('res.country',
                                   string='Pays du participant étranger')
-    date = fields.Char(string=" Date entrée en production")
-    capital = fields.Float(string="Capital social en DT")
+    date = fields.Date(string=" Date entrée en production")
+    capital = fields.Float(string="Capital social en DT" , digits=(6, 3))
     emploi = fields.Float(string="Emploi")
     name_city = fields.Many2one('delegation', string="Délégation",
                                 domain="[('state_id', '=?', state_id)]")
+
+    state_id = fields.Many2one("res.country.state", string="Gouvernorat", ondelete='restrict',
+                               domain="[('country_id', '=?', country_id)]")
+    country_id = fields.Many2one('res.country', string='Country', ondelete='restrict')
+
+    name_city_seige = fields.Many2one('delegation', string="Délégation",
+                                domain="[('state_id', '=?', state_id)]")
+
+    state_id_seige = fields.Many2one("res.country.state", string="Gouvernorat", ondelete='restrict',
+                               domain="[('country_id', '=?', country_id)]")
+    country_id_seige = fields.Many2one('res.country', string='Country', ondelete='restrict')
+    is_industry = fields.Boolean()
 
     # to count the nomber of companies saved in contacts we will create a compute field
     # so we need the boolean field is_company to specify the company
     # saved company
     def get_default(self):
-        return self.search_count([('is_company', '=', True)])
+        return self.search_count([('is_industry', '=', True)])
 
     nb_company = fields.Integer(
         compute='_compute_total',
@@ -43,7 +57,7 @@ class Partner(models.Model):
 
     def _compute_total(self):
         for partner in self:
-            partner.nb_company = self.search_count([('is_company', '=', True)])
+            partner.nb_company = self.search_count([('is_industry', '=', True)])
 
 
 

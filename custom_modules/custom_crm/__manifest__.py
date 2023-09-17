@@ -28,10 +28,14 @@
 
     # always loaded
     'data': [
-        'views/views.xml',
         'security/ir.model.access.csv',
-        'views/contacts.xml',
-        'views/city.xml'
+        'security/security.xml',
+        'views/views.xml',
+        # 'views/contacts.xml',
+        'views/city.xml',
+        'views/juridique.xml',
+        'views/new_contacts.xml',
+        'views/regime.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

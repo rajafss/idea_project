@@ -5,3 +5,4 @@ from . import city
 from . import contacts
 from . import contacts
 from . import juridique
+from . import regime
