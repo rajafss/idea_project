@@ -12,22 +12,25 @@ class Partner(models.Model):
     responsable = fields.Char( string="Premier responsable")
     civilite = fields.Many2one('res.partner.title', string='Civilité du promoteur')
     secteur = fields.Many2one('res.partner.industry')
-
+    activite = fields.Char(string="Activité")
     email1 = fields.Char(string="Email de siège")
     email2 = fields.Char(string = "Email d\'usine")
     phone2 = fields.Char(string = "Téléphone usine")
     phone1 = fields.Char(string="Téléphone siège ")
+    mobile1 = fields.Char(string ="Mobile siège")
+    mobile2 = fields.Char(string="Mobile usine")
     fax2 = fields.Char(string="Fax usine")
     fax1 = fields.Char(string="Fax siège")
 
     regime = fields.Many2one('regime.regime',
                                 string="Régime")
 
-    participant = fields.Many2one('res.country',
-                                  string='Pays du participant étranger')
+    participant = fields.Char( string='Pays du participant étranger')
     date = fields.Date(string=" Date entrée en production")
-    capital = fields.Float(string="Capital social en DT" , digits=(6, 3))
+    capital = fields.Integer(string="Capital social en DT" )
     emploi = fields.Integer(string="Emploi")
+
+    street_seige = fields.Char()
     name_city = fields.Many2one('delegation', string="Délégation",
                                 domain="[('state_id', '=?', state_id)]")
 
