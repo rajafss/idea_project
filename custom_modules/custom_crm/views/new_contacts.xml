@@ -320,10 +320,12 @@
                     <field name="display_name"/>
 <!--                    <field name="title"/>-->
                     <field name="email1"/>
+                    <field name="email2"/>
                     <field name="parent_id"/>
                     <field name="is_company"/>
 <!--                    <field name="function"/>-->
                     <field name="phone1"/>
+                    <field name="phone2"/>
                     <field name="street"/>
 <!--                    <field name="street2"/>-->
                     <field name="zip"/>
@@ -371,8 +373,12 @@
                                                 <t t-if="record.name_city.raw_value"><field name="name_city"/><t t-if="record.country_id.raw_value">, </t></t>
                                                 <t t-if="record.country_id.raw_value"><field name="country_id"/></t>
                                             </li>
-                                            <li t-if="record.email1.raw_value" class="o_text_overflow">
-                                                <field name="email1"/></li>
+                                            <li t-if="record.street.raw_value" class="o_text_overflow">
+                                                <field name="street"/></li>
+                                            <li t-if="record.email2.raw_value" class="o_text_overflow">
+                                                <field name="email2"/></li>
+                                            <li t-if="record.phone2.raw_value" class="o_text_overflow">
+                                                <field name="phone2"/></li>
                                         </ul>
                                         <div class="o_kanban_tags_section oe_kanban_partner_categories">
                                             <span class="oe_kanban_list_many2many">
