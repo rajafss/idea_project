@@ -13,10 +13,10 @@ class Partner(models.Model):
     civilite = fields.Many2one('res.partner.title', string='Civilité du promoteur')
     secteur = fields.Many2one('res.partner.industry')
 
-    email1 = fields.Char(string="email de siège")
-    email2 = fields.Char(string = "email d\'usine")
+    email1 = fields.Char(string="Email de siège")
+    email2 = fields.Char(string = "Email d\'usine")
     phone2 = fields.Char(string = "Téléphone usine")
-    phone1 = fields.Char( string="Téléphone siège ")
+    phone1 = fields.Char(string="Téléphone siège ")
     fax2 = fields.Char(string="Fax usine")
     fax1 = fields.Char(string="Fax siège")
 
@@ -27,7 +27,7 @@ class Partner(models.Model):
                                   string='Pays du participant étranger')
     date = fields.Date(string=" Date entrée en production")
     capital = fields.Float(string="Capital social en DT" , digits=(6, 3))
-    emploi = fields.Float(string="Emploi")
+    emploi = fields.Integer(string="Emploi")
     name_city = fields.Many2one('delegation', string="Délégation",
                                 domain="[('state_id', '=?', state_id)]")
 
@@ -40,7 +40,7 @@ class Partner(models.Model):
 
     state_id_seige = fields.Many2one("res.country.state", string="Gouvernorat", ondelete='restrict',
                                domain="[('country_id', '=?', country_id)]")
-    country_id_seige = fields.Many2one('res.country', string='Country', ondelete='restrict')
+    country_id_seige = fields.Many2one('res.country', string='Pays', ondelete='restrict')
     is_industry = fields.Boolean()
 
     # to count the nomber of companies saved in contacts we will create a compute field
@@ -58,9 +58,6 @@ class Partner(models.Model):
     def _compute_total(self):
         for partner in self:
             partner.nb_company = self.search_count([('is_industry', '=', True)])
-
-
-
 
 
 
