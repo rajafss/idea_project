@@ -12,7 +12,6 @@ class Partner(models.Model):
     responsable = fields.Char( string="Premier responsable")
     civilite = fields.Many2one('res.partner.title', string='Civilité du promoteur')
     secteur = fields.Many2one('res.partner.industry')
-    activite = fields.Char(string="Activité")
     email1 = fields.Char(string="Email de siège")
     email2 = fields.Char(string = "Email d\'usine")
     phone2 = fields.Char(string = "Téléphone usine")
@@ -24,6 +23,7 @@ class Partner(models.Model):
 
     regime = fields.Many2one('regime.regime',
                                 string="Régime")
+    code = fields.Char(string="Code TVA")
 
     participant = fields.Char( string='Pays du participant étranger')
     date = fields.Date(string=" Date entrée en production")
