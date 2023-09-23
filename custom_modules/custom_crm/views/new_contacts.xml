@@ -43,7 +43,7 @@
                     </div>
 
                     <group>
-                        <group string="Informations Générale">
+                        <group string="Informations Générales">
                             <field name="is_industry" invisible="1"/>
                              <field name="user_ids" invisible="1"/>
                             <field name="parent_id" invisible="1"/>
@@ -59,7 +59,7 @@
                             <field name="active" invisible="1"/>
                             <field name="parent_id" invisible="1"/>
                         </group>
-                        <group string=" Informations Générale">
+                        <group string=" Informations Générales">
                             <field name="regime"/>
                             <field name="participant"/>
                             <field name="date" string="Date entrée en production"/>
@@ -68,7 +68,7 @@
                             <field name="code"  placeholder="e.g. BE0477472701"/>
                             <field name="website" string="Site Web" widget="url" placeholder="e.g. https://www.odoo.com"/>
                         </group>
-                        <group string="seige">
+                        <group string="siege">
                                 <field name="user_ids" invisible="1"/>
                                 <field name="phone1" widget="phone"/>
                                 <field name="mobile1" widget="phone"/>
@@ -83,37 +83,37 @@
                                 <field name="email2" widget="email" context="{'gravatar_image': True}"
                                    attrs="{'required': [('user_ids','!=', [])]}"/>
                             </group>
-                        <group string="Addresse seige">
+                        <group string="Adresse siege">
                             <span class="o_form_label o_td_label" name="address_name">
-                                <b>Addresse</b>
+                                <b>Adresse</b>
                             </span>
                             <div class="o_address_format">
-                                <field name="street_seige" placeholder="Rue et numéro du siège..." class="o_address_street"/>
+                                <field name="street_seige" placeholder="Addresse et numéro du siège..." class="o_address_street"/>
                                 <field name="name_city_seige" placeholder="Délégation"
                                        class="o_address_city"/>
                                 <field name="state_id_seige" class="o_address_state" placeholder="Gouvernorat"
                                        options="{'no_open': True, 'no_quick_create': True}"/>
-                                <field name="zip" placeholder="Code Postal"
+                                <field name="zip_siege" placeholder="Code Postal"
                                        class="o_address_zip"/>
                                 <div name="partner_address_country" class="d-flex justify-content-between">
-                                    <field name="country_id_seige"
+                                    <field name="country_id_siege"
                                            placeholder="Pays"
                                            class="o_address_country"
                                            options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
                                 </div>
                             </div>
                             </group>
-                        <group string="Addresse usine">
+                        <group string="Adresse usine">
                             <span class="o_form_label o_td_label" name="address_name">
-                                <b>Addresse</b>
+                                <b>Adresse</b>
                             </span>
                             <div class="o_address_format">
-                                <field name="street" placeholder="Rue et numéro..." class="o_address_street"/>
+                                <field name="street_usine" placeholder="Addresse et numéro..." class="o_address_street"/>
                                 <field name="name_city" placeholder="Délégation"
                                        class="o_address_city"/>
                                 <field name="state_id" class="o_address_state" placeholder="Gouvernorat"
                                        options="{'no_open': True, 'no_quick_create': True}"/>
-                                <field name="zip" placeholder="Code Postal"
+                                <field name="zip_usine" placeholder="Code Postal"
                                        class="o_address_zip"/>
                                 <div name="partner_address_country" class="d-flex justify-content-between">
                                     <field name="country_id"
@@ -126,7 +126,7 @@
                     </group>
 
                     <notebook colspan="4">
-                        <page string="Contacts &amp; Addresses" name="contact_addresses" autofocus="autofocus">
+                        <page string="Contacts &amp; Adresses" name="contact_addresses" autofocus="autofocus">
                             <field name="child_ids"
                                    mode="kanban"
                                    context="{'default_parent_id': active_id,'default_user_id': user_id,}">
@@ -184,42 +184,42 @@
                                     <sheet>
                                         <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
                                         <field name="parent_id" invisible="1"/>
-                                        <div class="text-muted oe_edit_only">
-                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'contact')]}">
-                                                <span>Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).</span>
-                                            </p>
-                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'invoice')]}">
-                                                <span>Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.</span>
-                                            </p>
-                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'delivery')]}">
-                                                <span>Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.</span>
-                                            </p>
-                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'private')]}">
-                                                <span>Private addresses are only visible by authorized users and contain sensitive data (employee home addresses, ...).</span>
-                                            </p>
-                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'other')]}">
-                                                <span>Other address for the company (e.g. subsidiary, ...)</span>
-                                            </p>
-                                        </div>
+<!--                                        <div class="text-muted oe_edit_only">-->
+<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'contact')]}">-->
+<!--                                                <span>Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).</span>-->
+<!--                                            </p>-->
+<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'invoice')]}">-->
+<!--                                                <span>Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.</span>-->
+<!--                                            </p>-->
+<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'delivery')]}">-->
+<!--                                                <span>Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.</span>-->
+<!--                                            </p>-->
+<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'private')]}">-->
+<!--                                                <span>Private addresses are only visible by authorized users and contain sensitive data (employee home addresses, ...).</span>-->
+<!--                                            </p>-->
+<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'other')]}">-->
+<!--                                                <span>Other address for the company (e.g. subsidiary, ...)</span>-->
+<!--                                            </p>-->
+<!--                                        </div>-->
                                         <hr/>
                                         <group>
                                             <group>
-                                                <field name="name" string="Contact Name" attrs="{'required' : [('type', '=', 'contact')]}"/>
-                                                <field name="title" options="{'no_open': True}" placeholder="e.g. Mr."
+                                                <field name="name" string="Nom du contact" attrs="{'required' : [('type', '=', 'contact')]}"/>
+                                                <field name="title" string="Civilité" options="{'no_open': True}" placeholder="e.g. Mr."
                                                     attrs="{'invisible': [('type','!=', 'contact')]}"/>
                                                 <field name="function" placeholder="e.g. Sales Director"
                                                     attrs="{'invisible': [('type','!=', 'contact')]}"/>
-                                                <label for="street" string="Address" attrs="{'invisible': [('type','=', 'contact')]}"/>
-                                                <div attrs="{'invisible': [('type','=', 'contact')]}">
-                                                    <div class="o_address_format" name="div_address">
-                                                        <field name="street" placeholder="Street..." class="o_address_street"/>
-                                                        <field name="street2" placeholder="Street 2..." class="o_address_street"/>
-                                                        <field name="city" placeholder="City" class="o_address_city"/>
-                                                        <field name="state_id" class="o_address_state" placeholder="State" options="{'no_open': True, 'no_quick_create': True}" context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}"/>
-                                                        <field name="zip" placeholder="ZIP" class="o_address_zip"/>
-                                                        <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
-                                                    </div>
-                                                </div>
+<!--                                                <label for="street" string="Address" attrs="{'invisible': [('type','=', 'contact')]}"/>-->
+<!--                                                <div attrs="{'invisible': [('type','=', 'contact')]}">-->
+<!--                                                    <div class="o_address_format" name="div_address">-->
+<!--                                                        <field name="street" placeholder="Street..." class="o_address_street"/>-->
+<!--                                                        <field name="street2" placeholder="Street 2..." class="o_address_street"/>-->
+<!--                                                        <field name="city" placeholder="City" class="o_address_city"/>-->
+<!--                                                        <field name="state_id" class="o_address_state" placeholder="State" options="{'no_open': True, 'no_quick_create': True}" context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}"/>-->
+<!--                                                        <field name="zip" placeholder="ZIP" class="o_address_zip"/>-->
+<!--                                                        <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                             </group>
                                             <group>
                                                 <field name="email" widget="email"/>
@@ -229,7 +229,7 @@
                                             </group>
                                         </group>
                                         <group>
-                                            <field name="comment" placeholder="Internal notes..." nolabel="1" colspan="2"/>
+                                            <field name="comment" placeholder="Notes Internes..." nolabel="1" colspan="2"/>
                                         </group>
                                         <field name="lang" invisible="True"/>
                                         <field name="user_id" invisible="True"/>
@@ -237,7 +237,7 @@
                                 </form>
                             </field>
                         </page>
-                        <page name='sales_purchases' string="Sales &amp; Purchase">
+                        <page name='sales_purchases' string="Ventes &amp; Achats">
                             <group name="container_row_2">
                                 <group string="Sales" name="sale" priority="1">
                                     <field name="user_id" widget="many2one_avatar_user" domain="[('share', '=', False)]"/>
@@ -252,8 +252,8 @@
                                 </group>
                             </group>
                         </page>
-                        <page name='internal_notes' string="Internal Notes">
-                            <field name="comment" placeholder="Internal notes..."/>
+                        <page name='internal_notes' string="Notes Internes">
+                            <field name="comment" placeholder="Notes Internes..."/>
                         </page>
                     </notebook>
                 </sheet>
@@ -288,6 +288,8 @@
                     <field name="emploi" optional="show"/>
                     <field name="phone1" class="o_force_ltr" optional="show"/>
                     <field name="phone2" class="o_force_ltr" optional="show"/>
+                    <field name="mobile1" class="o_force_ltr" optional="show"/>
+                    <field name="mobile2" class="o_force_ltr" optional="show"/>
                     <field name="email1" optional="show"/>
                     <field name="email2" optional="show"/>
                     <field name="fax1" optional="show"/>
@@ -295,16 +297,40 @@
                     <field name="user_id" optional="show" widget="many2one_avatar_user"
                            domain="[('share', '=', False)]" invisible="1"/>
                     <field name="activity_ids" optional="show" widget="list_activity"/>
-                    <field name="state_id" optional="hide" readonly="1"/>
+                    <field name="state_id" string="Gouvernorat" optional="hide" readonly="1"/>
+                    <field name="state_id_seige" optional="hide" readonly="1"/>
                     <field name="country_id" optional="show" readonly="1"/>
                     <field name="code"  optional="hide" readonly="1"/>
                     <field name="category_id" string="Activité" options="{'color_field': 'color', 'no_create_edit': True}"
                            optional="hide" widget="many2many_tags"/>
                      <field name="parent_id" invisible="1" readonly="1"/>
                     <field name="active" invisible="1"/>
+                    <field name="street_usine" optional="hide"/>
+                    <field name="street_seige" optional="hide"/>
+                    <field name="zip_siege" optional="hide"/>
+                    <field name="zip_usine" optional="hide"/>
                 </tree>
             </field>
         </record>
+
+         <record id="view_search_partner" model="ir.ui.view">
+            <field name="name">res.partner.select</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search string="Search Partner">
+                    <field name="name" string="Dénomination" filter_domain="['|', '|', '|', '|', ('display_name', 'ilike', self), ('ref', '=', self), ('email', 'ilike', self), ('vat', 'ilike', self), ('company_registry', 'ilike', self)]"/>
+                    <field name="email" filter_domain="['|',('email1', 'ilike', self),('email2', 'ilike', self)]"/>
+                    <field name="phone" filter_domain="['|','|','|',('phone2', 'ilike', self), ('mobile2', 'ilike', self), ('phone1', 'ilike', self), ('mobile1', 'ilike', self)]"/>
+                    <field name="zip" filter_domain="['|', ('zip_siege', 'ilike', self), ('zip_usine', 'ilike', self)]"/>
+                    <field name="category_id" string="Activité" filter_domain="[('category_id', 'child_of', self)]"/>
+                    <field name="responsable" />
+                    <field name="secteur" />
+                    <field name="date" />
+                    <field name="street" string="Adresse" filter_domain="['|', ('street_seige', 'ilike', self), ('street_usine', 'ilike', self)]"/>
+                    <field name="state_id" string="Gouvernorat" filter_domain="['|', ('state_id', 'ilike', self), ('state_id_seige', 'ilike', self)]"/>
+                </search>
+            </field>
+         </record>
 
 
        <!--  kanban view -->
@@ -324,9 +350,11 @@
 <!--                    <field name="function"/>-->
                     <field name="phone1"/>
                     <field name="phone2"/>
-                    <field name="street"/>
+                    <field name="street_seige"/>
+                    <field name="street_usine"/>
 <!--                    <field name="street2"/>-->
-                    <field name="zip"/>
+                    <field name="zip_siege"/>
+                    <field name="zip_usine"/>
                     <field name="name_city"/>
                     <field name="country_id"/>
 <!--                    <field name="mobile"/>-->
@@ -371,8 +399,8 @@
                                                 <t t-if="record.name_city.raw_value"><field name="name_city"/><t t-if="record.country_id.raw_value">, </t></t>
                                                 <t t-if="record.country_id.raw_value"><field name="country_id"/></t>
                                             </li>
-                                            <li t-if="record.street.raw_value" class="o_text_overflow">
-                                                <field name="street"/></li>
+                                            <li t-if="record.street_usine.raw_value" class="o_text_overflow">
+                                                <field name="street_usine"/></li>
                                             <li t-if="record.email2.raw_value" class="o_text_overflow">
                                                 <field name="email2"/></li>
                                             <li t-if="record.phone2.raw_value" class="o_text_overflow">
@@ -438,6 +466,7 @@
             <field name="name">Idea Contacts</field>
             <field name="res_model">res.partner</field>
             <field name="view_mode">tree,form,kanban,activity</field>
+            <field name="search_view_id" ref="custom_crm.view_search_partner"/>
             <field name="domain">[('is_industry', '=', True)]</field>
             <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('custom_crm.idea_partner_tree')}),

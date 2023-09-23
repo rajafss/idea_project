@@ -1,6 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_regime_user,regime_regime,model_regime_regime,base.group_user,1,0,0,0
-access_regime,regime_regime,model_regime_regime,custom_crm.management_contacts_group,1,1,1,
+
 
 access_delegation_user,delegation,model_delegation,base.group_user,1,0,0,0
 access_delegation,delegation,model_delegation,custom_crm.management_contacts_group,1,1,1,1

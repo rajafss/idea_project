@@ -35,7 +35,7 @@
         'views/city.xml',
         'views/juridique.xml',
         'views/new_contacts.xml',
-        'views/regime.xml'
+        # 'views/regime.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

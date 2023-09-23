@@ -21,29 +21,37 @@ class Partner(models.Model):
     fax2 = fields.Char(string="Fax usine")
     fax1 = fields.Char(string="Fax siège")
 
-    regime = fields.Many2one('regime.regime',
-                                string="Régime")
+    regime = fields.Selection([('exportatrice', 'Totalement exportatrice'),
+                               ('non exportatrice ', 'Non Totalement exportatrice')], string="Régime")
     code = fields.Char(string="Code TVA")
 
     participant = fields.Char( string='Pays du participant étranger')
-    date = fields.Date(string=" Date entrée en production")
+    date = fields.Char(string=" Date entrée en production")
     capital = fields.Integer(string="Capital social en DT" )
     emploi = fields.Integer(string="Emploi")
 
-    street_seige = fields.Char()
-    name_city = fields.Many2one('delegation', string="Délégation",
+    street_seige = fields.Char(string="Adresse siège")
+    street_usine = fields.Char(string="Adresse usine")
+    name_city = fields.Many2one('delegation', string="Délégation d\'usine",
                                 domain="[('state_id', '=?', state_id)]")
-
-    state_id = fields.Many2one("res.country.state", string="Gouvernorat", ondelete='restrict',
-                               domain="[('country_id', '=?', country_id)]")
+    name_city_seige = fields.Many2one('delegation', string="Délégation du siège",
+                                      domain="[('state_id', '=?', state_id_seige)]")
     country_id = fields.Many2one('res.country', string='Country', ondelete='restrict')
 
-    name_city_seige = fields.Many2one('delegation', string="Délégation",
-                                domain="[('state_id', '=?', state_id)]")
-
-    state_id_seige = fields.Many2one("res.country.state", string="Gouvernorat", ondelete='restrict',
+    state_id = fields.Many2one("res.country.state", string="Gouvernorat d\'usine", ondelete='restrict',
                                domain="[('country_id', '=?', country_id)]")
-    country_id_seige = fields.Many2one('res.country', string='Pays', ondelete='restrict')
+
+    country_id_siege = fields.Many2one('res.country', string='Pays', ondelete='restrict')
+
+    state_id_seige = fields.Many2one("res.country.state", string="Gouvernorat du siège", ondelete='restrict',
+                                     domain="[('country_id', '=?', country_id_siege)]")
+    zip_siege = fields.Char(string="code postal siège" ,change_default=True)
+    zip_usine = fields.Char(string="code postal usine",change_default=True)
+
+
+
+
+
     is_industry = fields.Boolean()
 
     # to count the nomber of companies saved in contacts we will create a compute field
