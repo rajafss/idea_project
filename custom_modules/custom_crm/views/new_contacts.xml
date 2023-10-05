@@ -111,7 +111,8 @@
                                 <field name="street_usine" placeholder="Addresse et numéro..." class="o_address_street"/>
                                 <field name="name_city" placeholder="Délégation"
                                        class="o_address_city"/>
-                                <field name="state_id" class="o_address_state" placeholder="Gouvernorat"
+                                <field name="state_id_usine" string="Gouvernorat d'usine"
+                                       class="o_address_state" placeholder="Gouvernorat"
                                        options="{'no_open': True, 'no_quick_create': True}"/>
                                 <field name="zip_usine" placeholder="Code Postal"
                                        class="o_address_zip"/>
@@ -151,7 +152,6 @@
                                     <field name="image_128"/>
                                     <field name="avatar_128"/>
                                     <field name="lang"/>
-                                    <!-- fields in form x2many view to diminish requests -->
                                     <field name="comment"/>
                                     <field name="display_name"/>
                                     <templates>
@@ -297,9 +297,9 @@
                     <field name="user_id" optional="show" widget="many2one_avatar_user"
                            domain="[('share', '=', False)]" invisible="1"/>
                     <field name="activity_ids" optional="show" widget="list_activity"/>
-                    <field name="state_id" string="Gouvernorat" optional="hide" readonly="1"/>
+                    <field name="state_id_usine" string="Gouvernorat d'usine" optional="hide"/>
                     <field name="state_id_seige" optional="hide" readonly="1"/>
-                    <field name="country_id" optional="show" readonly="1"/>
+                    <field name="country_id" string="Pays" optional="show" readonly="1"/>
                     <field name="code"  optional="hide" readonly="1"/>
                     <field name="category_id" string="Activité" options="{'color_field': 'color', 'no_create_edit': True}"
                            optional="hide" widget="many2many_tags"/>
@@ -318,16 +318,10 @@
             <field name="model">res.partner</field>
             <field name="arch" type="xml">
                 <search string="Search Partner">
-                    <field name="name" string="Dénomination" filter_domain="['|', '|', '|', '|', ('display_name', 'ilike', self), ('ref', '=', self), ('email', 'ilike', self), ('vat', 'ilike', self), ('company_registry', 'ilike', self)]"/>
-                    <field name="email" filter_domain="['|',('email1', 'ilike', self),('email2', 'ilike', self)]"/>
-                    <field name="phone" filter_domain="['|','|','|',('phone2', 'ilike', self), ('mobile2', 'ilike', self), ('phone1', 'ilike', self), ('mobile1', 'ilike', self)]"/>
-                    <field name="zip" filter_domain="['|', ('zip_siege', 'ilike', self), ('zip_usine', 'ilike', self)]"/>
-                    <field name="category_id" string="Activité" filter_domain="[('category_id', 'child_of', self)]"/>
-                    <field name="responsable" />
-                    <field name="secteur" />
-                    <field name="date" />
-                    <field name="street" string="Adresse" filter_domain="['|', ('street_seige', 'ilike', self), ('street_usine', 'ilike', self)]"/>
-                    <field name="state_id" string="Gouvernorat" filter_domain="['|', ('state_id', 'ilike', self), ('state_id_seige', 'ilike', self)]"/>
+                    <field name="name"
+                           filter_domain="['|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|','|',('juridique','ilike', self),('raisonS','ilike', self),('regime','ilike', self),('participant','ilike', self),('fax2','ilike', self),('fax1','ilike', self),('country_id', 'ilike', self),('zip_siege', 'ilike', self),('zip_usine', 'ilike', self), ('state_id_seige', 'ilike', self), ('state_id_usine', 'ilike', self), ('street_seige', 'ilike', self),('street_usine', 'ilike', self),('date', 'ilike', self),('secteur', 'ilike', self),('responsable', 'ilike', self),('category_id', 'child_of', self),('zip_usine', 'ilike', self),('zip_siege', 'ilike', self),('phone2', 'ilike', self),('mobile2', 'ilike', self),('phone1', 'ilike', self), ('mobile1', 'ilike', self),('display_name', 'ilike', self),('email1', 'ilike', self),('email2', 'ilike', self)]"/>
+                    <field name="capital"/>
+                    <field name="emploi"/>
                 </search>
             </field>
          </record>
@@ -360,7 +354,7 @@
 <!--                    <field name="mobile"/>-->
                     <field name="opportunity_count" groups="sales_team.group_sale_salesman"/>
                     <field name="meeting_count"/>
-                    <field name="state_id"/>
+                    <field name="state_id_usine"/>
                     <field name="category_id"/>
                     <field name="avatar_128"/>
 <!--                    <field name="type"/>-->

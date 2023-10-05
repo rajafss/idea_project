@@ -33,12 +33,12 @@ class Partner(models.Model):
     street_seige = fields.Char(string="Adresse siège")
     street_usine = fields.Char(string="Adresse usine")
     name_city = fields.Many2one('delegation', string="Délégation d\'usine",
-                                domain="[('state_id', '=?', state_id)]")
+                                domain="[('state_id', '=?', state_id_usine)]")
     name_city_seige = fields.Many2one('delegation', string="Délégation du siège",
                                       domain="[('state_id', '=?', state_id_seige)]")
     country_id = fields.Many2one('res.country', string='Country', ondelete='restrict')
 
-    state_id = fields.Many2one("res.country.state", string="Gouvernorat d\'usine", ondelete='restrict',
+    state_id_usine = fields.Many2one("res.country.state", string="Gouvernorat d\'usine", ondelete='restrict',
                                domain="[('country_id', '=?', country_id)]")
 
     country_id_siege = fields.Many2one('res.country', string='Pays', ondelete='restrict')
