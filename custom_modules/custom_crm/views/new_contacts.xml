@@ -468,6 +468,7 @@
             (0, 0, {'view_mode': 'kanban', 'view_id': ref('custom_crm.idea_kanban_view')}),
             (0, 0, {'view_mode': 'activity', 'view_id': ref('custom_crm.idea_partner_view_activity')})]"/>
             <field name="context">{'default_is_industry': True}</field>
+                <field name="limit">7</field>
         </record>
 
         <record id="contacts.action_contacts" model="ir.actions.act_window">
