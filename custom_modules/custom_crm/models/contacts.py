@@ -14,12 +14,12 @@ class Partner(models.Model):
     secteur = fields.Many2one('res.partner.industry')
     email1 = fields.Char(string="Email de siège")
     email2 = fields.Char(string = "Email d\'usine")
-    phone2 = fields.Char(string = "Téléphone usine")
-    phone1 = fields.Char(string="Téléphone siège ")
-    mobile1 = fields.Char(string ="Mobile siège")
-    mobile2 = fields.Char(string="Mobile usine")
-    fax2 = fields.Char(string="Fax usine")
-    fax1 = fields.Char(string="Fax siège")
+    phone2 = fields.Char(string = "Téléphone usine", widget='phone')
+    phone1 = fields.Char(string="Téléphone siège " , widget='phone')
+    mobile1 = fields.Char(string ="Mobile siège", widget='phone')
+    mobile2 = fields.Char(string="Mobile usine", widget='phone')
+    fax2 = fields.Char(string="Fax usine",widget='phone',)
+    fax1 = fields.Char(string="Fax siège", widget='phone')
 
     regime = fields.Selection([('exportatrice', 'Totalement exportatrice'),
                                ('non exportatrice ', 'Non Totalement exportatrice')], string="Régime")

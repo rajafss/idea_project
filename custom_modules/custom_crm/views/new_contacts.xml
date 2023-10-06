@@ -70,7 +70,7 @@
                         </group>
                         <group string="siege">
                                 <field name="user_ids" invisible="1"/>
-                                <field name="phone1" widget="phone"/>
+                                <field name="phone1" widget="phone" />
                                 <field name="mobile1" widget="phone"/>
                                 <field name="fax1" widget="phone"/>
                                 <field name="email1" widget="email1" context="{'gravatar_image': True}"
@@ -274,7 +274,7 @@
             <field name="model">res.partner</field>
             <field eval="1" name="priority"/>
             <field name="arch" type="xml">
-                <tree>
+                <tree  sample="1" multi_edit="1">
                     <field name="name" string="Dénomination"/>
                     <field name="raisonS" optional="show"/>
                     <field name="juridique" optional="show"/>
