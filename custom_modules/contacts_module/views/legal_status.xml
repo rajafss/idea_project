@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+
+        <record model="ir.ui.view" id="legal_list">
+            <field name="name">Legal Status</field>
+            <field name="model">forme.juridique</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+      <record id="legal_view_form" model="ir.ui.view">
+        <field name="name">Legal Status form</field>
+        <field name="model">forme.juridique</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                     <group>
+                         <field name="name"/>
+                     </group>
+                </sheet>
+            </form>
+        </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="legal_action_window">
+          <field name="name">Legal Status</field>
+          <field name="res_model">forme.juridique</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+
+      <menuitem name="Legal Status"
+                id="forme_juridique_menu_1"
+                parent="contacts.res_partner_menu_config"
+              action="legal_action_window"
+                sequence="2"/>
+  </data>
+</odoo>

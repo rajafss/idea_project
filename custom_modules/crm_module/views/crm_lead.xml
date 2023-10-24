@@ -1,0 +1,168 @@
+<odoo>
+    <data>
+        <!--     view_crm_lead_form_inherit   -->
+        <record id="crm_lead_view_form" model="ir.ui.view">
+            <field name="name">crm.lead.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="priority" eval="2"/>
+            <field name="arch" type="xml">
+                <button name="%(crm.crm_lead_lost_action)d" position="attributes">
+                    <attribute name="groups">sales_team.group_sale_manager</attribute>
+                    <attribute name="string">Final closure</attribute>
+                </button>
+
+                <field name="partner_name" position="after">
+                   <field name="product" />
+                </field>
+                <data>
+                    <field name="name" position="replace"/>
+                    <xpath expr="//div[hasclass('oe_title')]"  position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                     <xpath expr="//div[hasclass('oe_title')]"  position="after">
+                        <group>
+                            <field name="create_date" readonly="1" />
+                        </group>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="attributes">
+                        <attribute name="string">Prospect</attribute>
+                        <attribute name="context">{'form_view_ref':'contacts_module.idea_view_partner_form'}</attribute>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="after">
+                        <field name="name" string="Opportunity"/>
+                        <field name="product"/>
+                        <field name="email_p" string="Email" widget="email"/>
+                        <field name="phone" widget="phone"/>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/div/field[@name='email_from']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/div/field[@name='phone']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/div[hasclass('o_row')]" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/label[@for='phone']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                    <xpath expr="//group[@name='opportunity_partner']/label[@for='email_from']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+<!--                    <xpath expr="//group/field[@name='tag_ids']" position="attributes">-->
+<!--                        <attribute name="invisible">1</attribute>-->
+<!--                    </xpath>-->
+                    <xpath expr="//group/field[@name='user_id']" position="after">
+                        <div class="oe_edit_only d-md-flex align-items-center">
+                             <label for="probability"/>
+                        </div>
+                        <div id="probability" class="d-inline-block">
+                            <field name="is_automated_probability" invisible="1"/>
+                            <field name="probability" string="Probability" widget="float" class="oe_inline o_input_6ch"/>
+                            <span class="oe_grey"> %</span>
+                        </div>
+                    </xpath>
+
+                    <xpath expr="//group/field[@name='user_id']" position="attributes">
+                        <attribute name="string">Prospector</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='lead_properties']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+<!--                    <xpath expr="//page[@name='internal_notes']" position="inside">-->
+<!--                        <field name="description"/>-->
+<!--                    </xpath>-->
+                    <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name="Argument" >
+                            <field name="argument_ids" widget="one2many">
+                                <tree editable="bottom">
+                                    <field name="question_text"/>
+                                    <field name="response_text"/>
+                                </tree>
+                            </field>
+                    </page>
+                </xpath>
+
+                </data>
+            </field>
+        </record>
+
+        <!--     view_crm_lead_quick_create_form_view   -->
+        <record id="view_crm_lead_form_inherit" model="ir.ui.view">
+            <field name="name">crm.lead.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//group/field[@name='partner_id']" position="attributes">
+                        <attribute name="string">Prospect</attribute>
+                    </xpath>
+                    <xpath expr="//group/field[@name='name']" position="after">
+                        <field name="product"/>
+                        <div class="oe_edit_only d-md-flex align-items-center">
+                            <label for="probability"/>
+                            <div class="d-flex align-items-center">
+                                <button class="ps-0 ps-md-2 btn btn-link" name="action_set_automated_probability" type="object"
+                                                    attrs="{'invisible': [('is_automated_probability', '=', True)]}">
+                                    <i class="fa fa-gear" role="img" title="Switch to automatic probability" aria-label="Switch to automatic probability"></i>
+                                </button>
+                                <small class="oe_grey h6 mb0 d-flex" attrs="{'invisible': [('is_automated_probability', '=', True)]}">
+                                    <field class="mb0" name="automated_probability" force_save="1"/> %
+                                </small>
+                            </div>
+                        </div>
+                        <div id="probability" class="d-inline-block">
+                            <field name="is_automated_probability" invisible="1"/>
+                            <field name="probability" string="Probability" widget="float" class="oe_inline o_input_6ch"/>
+                            <span class="oe_grey"> %</span>
+                        </div>
+                        <field name="email_p" string="Email" widget="email"/>
+                    </xpath>
+                    <xpath expr="//field[@name='email_from']" position="attributes">
+                         <attribute name="invisible">1</attribute>
+                    </xpath>
+                    <xpath expr="//label[@for='expected_revenue']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                    <xpath expr="//div/field[@name='expected_revenue']" position="attributes">
+                         <attribute name="invisible">1</attribute>
+                    </xpath>
+
+                </data>
+            </field>
+        </record>
+
+
+        <menuitem id="product_menu_catalog"
+            name="Products" parent="crm.crm_menu_sales" action="sale.product_template_action"
+            sequence="5"/>
+
+
+<!--        <menuitem-->
+<!--        id="res_partner_menu_customer"-->
+<!--        name="Prospects"-->
+<!--        parent="crm.res_partner_menu_customer"-->
+<!--        action="contacts_module.action_partner_idea_form"-->
+<!--        sequence="5"/>-->
+
+<!--         <record id="menu_customers_inherit" model="ir.ui.menu">-->
+<!--            <attribute name="name">Prospects</attribute>-->
+<!--            <field name="parent_id" ref="crm.crm_menu_sales" />-->
+<!--            <field name="action" ref="contacts_module.action_partner_idea_form" />-->
+<!--             <field name="groups_id" eval="[(4, ref('base.group_user'))]" />-->
+<!--        </record>-->
+
+
+
+         <record id="menu_customers_inherit" model="ir.ui.menu">
+            <field name="name">Prospects</field>
+            <field name="parent_id" ref="crm.crm_menu_sales" />
+            <field name="action" ref="contacts_module.action_partner_idea_form" />
+             <field name="groups_id" eval="[(4, ref('base.group_user'))]" />
+             <!-- Replace with your custom action reference -->
+        </record>
+
+    </data>
+</odoo>
+

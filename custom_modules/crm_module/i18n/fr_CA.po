@@ -1,0 +1,199 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-22 15:03+0000\n"
+"PO-Revision-Date: 2023-10-22 15:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__name
+msgid " prospecting Satge"
+msgstr "Étape de prospection"
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
+msgid ""
+"<i class=\"fa fa-gear\" role=\"img\" title=\"Switch to automatic "
+"probability\" aria-label=\"Switch to automatic probability\"/>"
+msgstr ""
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
+msgid "<span class=\"oe_grey\"> %</span>"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__argument_ids
+#: model:ir.model.fields,field_description:crm_module.field_product_product__argument_ids
+#: model:ir.model.fields,field_description:crm_module.field_product_template__argument_ids
+msgid "Argumentaire"
+msgstr "Argumentaire"
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_crm_stage
+msgid "CRM Stages"
+msgstr "Étapes CRM"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__create_uid
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__create_date
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__display_name
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__email_p
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
+msgid "Email"
+msgstr ""
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+msgid "Final closure"
+msgstr "Clôture définitive"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__id
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__is_draft
+#: model:ir.model.fields,field_description:crm_module.field_crm_stage__is_draft
+msgid "Is Draft"
+msgstr "Est un brouillon"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument____last_update
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__write_uid
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__write_date
+#: model:ir.model.fields,field_description:crm_module.field_stage_stage__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Piste/Opportunité"
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+msgid "Opportunity"
+msgstr "Opportunité"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
+msgid "Probability"
+msgstr "Taux de succès"
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__product
+msgid "Product/Service"
+msgstr "Produit/Service"
+
+#. module: crm_module
+#: model:ir.ui.menu,name:crm_module.product_menu_catalog
+msgid "Products"
+msgstr "Produits"
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
+msgid "Prospect"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__prospecting_stage
+msgid "Prospecting stage"
+msgstr "Étape de prospection"
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+msgid "Prospector"
+msgstr "Prospecteur"
+
+#. module: crm_module
+#: model:ir.ui.menu,name:crm_module.menu_customers_inherit
+msgid "Prospects"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__question_text
+msgid "Question"
+msgstr "Questions"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__replace_id
+#: model:ir.model.fields,field_description:crm_module.field_res_users__replace_id
+msgid "Replace"
+msgstr "Remplacer"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_argument_argument__response_text
+msgid "Response"
+msgstr "Réponse"
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_res_users
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_argument_argument
+msgid "argument.argument"
+msgstr ""
+
+#. module: crm_module
+#: model:ir.model,name:crm_module.model_stage_stage
+msgid "stage.stage"
+msgstr ""

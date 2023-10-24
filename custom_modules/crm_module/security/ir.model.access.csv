@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_crm_user,crm_user,crm.model_crm_lead,base.group_user,1,1,1,0
+access_crm,crm,crm.model_crm_lead,contacts_module.management_contacts_group,1,1,1,1
+
+
+access_argument_user,argument_user,model_argument_argument,base.group_user,1,0,0,0
+access_argument,argument_manager,model_argument_argument,contacts_module.management_contacts_group,1,1,1,1
+
+
+

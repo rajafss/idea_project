@@ -1,0 +1,546 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* contacts_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-22 14:47+0000\n"
+"PO-Revision-Date: 2023-10-22 14:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__date
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__date
+msgid " Production entry date"
+msgstr "Date d'entrée en production"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "), are you sure to create a new one?"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_kanban_view
+msgid ""
+"<i class=\"fa fa-fw fa-calendar\" aria-label=\"Meetings\" role=\"img\" "
+"title=\"Meetings\"/>"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_kanban_view
+msgid ""
+"<i class=\"fa fa-fw fa-star\" aria-label=\"Opportunities\" role=\"img\" "
+"title=\"Opportunities\"/>"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_kanban_view
+msgid "<span class=\"bg-danger\">Archived</span>"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                <b>Address</b>\n"
+"                            </span>"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid ""
+"A partner with the same <span><span class=\"o_vat_label\">Company Registry</span>\n"
+"                </span> already exists ("
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid ""
+"A partner with the same <span><span class=\"o_vat_label\">Tax ID</span>\n"
+"                </span> already exists ("
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__category_id
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__category_id
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Activité"
+msgstr "Activité"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Addresse et numéro du siège..."
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Addresse et numéro..."
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Archived"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.actions.act_window,name:contacts_module.delegation_action_window
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__city
+#: model:ir.ui.menu,name:contacts_module.delegation_menu_1
+msgid "City"
+msgstr "Délégation"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__city_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__city_factory
+msgid "City Factory"
+msgstr "Délégation d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__city_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__city_seat
+msgid "City Seat"
+msgstr "Délégation de Siège"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Code Postal"
+msgstr "Code postal"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__code_tva
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__code_tva
+msgid "Code TVA"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.ui.menu,name:contacts_module.menu_partner_category_form
+msgid "Company activity"
+msgstr "Activité de société"
+
+#. module: contacts_module
+#: model:ir.model,name:contacts_module.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Contact / Address"
+msgstr "Contact / Adresse"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Contact image"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_view_activity
+msgid "Contacts"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Contacts & Address"
+msgstr "Contacts & Adresse"
+
+#. module: contacts_module
+#: model:res.groups,name:contacts_module.management_contacts_group
+msgid "Contacts Industry Configuration"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__country_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__country_seat
+msgid "Country Seat"
+msgstr "Pays de siège"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__participant
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__participant
+msgid "Country of foreign participant"
+msgstr "Pays du participant étranger"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__create_uid
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__create_date
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Denomination"
+msgstr "Dénomination"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__diet
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__diet
+msgid "Diet"
+msgstr "Régime"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__display_name
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Délégation"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__email_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__email_factory
+msgid "Email Factory"
+msgstr "Email Usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__email_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__email_seat
+msgid "Email Seat"
+msgstr "Email Siège"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__factory
+msgid "Factory"
+msgstr "Usine"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Factory address"
+msgstr "Adresse d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__zip_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__zip_factory
+msgid "Factory postal code"
+msgstr "Code postal d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__fax_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__fax_factory
+msgid "Fax Factory"
+msgstr "Fax d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__fax_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__fax_seat
+msgid "Fax Seat"
+msgstr "Fax de siège"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__responsible
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__responsible
+msgid "First manager"
+msgstr "Premier responsable"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "General informations"
+msgstr "Informations générales"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Gouvernorat"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Gouvernorat d'usine"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__id
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__id
+msgid "ID"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.actions.act_window,name:contacts_module.action_partner_idea_form
+#: model:ir.ui.menu,name:contacts_module.idea_res_partner_menu
+msgid "Idea Contacts"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Internal Notes"
+msgstr "Notes internes"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__is_industry
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__is_industry
+msgid "Is Industry"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__job
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__job
+msgid "Job"
+msgstr "Emploi"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation____last_update
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__write_uid
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__write_date
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.actions.act_window,name:contacts_module.legal_action_window
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__legal_status
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__legal_status
+#: model:ir.ui.menu,name:contacts_module.forme_juridique_menu_1
+msgid "Legal Status"
+msgstr "Forme juridique"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Meetings"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Misc"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__mobile_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__mobile_factory
+msgid "Mobile Factory"
+msgstr "Mobile d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__mobile_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__mobile_seat
+msgid "Mobile Seat"
+msgstr "Mobile de Siège"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Mobile:"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__nb_company
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__nb_company
+msgid "Nb Company"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields.selection,name:contacts_module.selection__res_partner__diet__non_exportatrice_
+msgid "Non Totalement exportatrice"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Notes Internes..."
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Partners"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Pays"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__phone_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__phone_factory
+msgid "Phone Factory"
+msgstr "Téléphone d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__phone_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__phone_seat
+msgid "Phone Seat"
+msgstr "Téléphone de siège"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Phone:"
+msgstr "Téléphone"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__product
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__product
+msgid "Product"
+msgstr "Produit"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Production entry date"
+msgstr "Date d'entrée en production"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Purchase"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__reason_Social
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__reason_Social
+msgid "Reason Social"
+msgstr "Raison sociale"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Reference"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Registered companies:"
+msgstr "Entreprises enregistrées :"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Sales & Purchases"
+msgstr "Ventes & achats"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.view_search_partner
+msgid "Search Partner"
+msgstr "Partenaire de recherche"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__zip_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__zip_seat
+msgid "Seat postal code"
+msgstr "Code postal du siège"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__sector
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__sector
+msgid "Sector/Category"
+msgstr "Secteur/Catégorie"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__capital
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__capital
+msgid "Share capital in DT"
+msgstr "Capital social de DT"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_delegation__state_id
+msgid "State"
+msgstr "Gouvernorat"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__state_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__state_factory
+msgid "State Factory"
+msgstr "Gouvernorat d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__state_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__state_seat
+msgid "State Seat"
+msgstr "Gouvernorat du Siège"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__street_factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__street_factory
+msgid "Street Factory"
+msgstr "Adresse d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__street_seat
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__street_seat
+msgid "Street Seat"
+msgstr "Adresse du siège"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__title
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__title
+msgid "Title"
+msgstr "Civilité"
+
+#. module: contacts_module
+#: model:ir.model.fields.selection,name:contacts_module.selection__res_partner__diet__exportatrice
+msgid "Totalement exportatrice"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "contact name"
+msgstr "Nom du contact"
+
+#. module: contacts_module
+#: model:ir.model,name:contacts_module.model_delegation
+msgid "delegation"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "e.g. \"B2B\", \"VIP\", \"Consulting\", ..."
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "e.g. Mr."
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "factory"
+msgstr "Usine"
+
+#. module: contacts_module
+#: model:ir.model,name:contacts_module.model_forme_juridique
+msgid "forme.juridique"
+msgstr ""
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__name
+msgid "legal status"
+msgstr "Forme juridique"
+
+#. module: contacts_module
+#: model:res.groups,name:contacts_module.no_one_visible
+msgid "no one visible contacts"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "seat"
+msgstr "Siège"
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "seat address"
+msgstr "Adresse du siège"
