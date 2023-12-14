@@ -4,4 +4,4 @@ class Users(models.Model):
 
     replace_id = fields.Many2one('res.users' , string="Replace")
 
-    phone = fields.Char(string="Téléphone")
+    phone = fields.Char()

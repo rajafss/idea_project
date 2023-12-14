@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-22 15:03+0000\n"
-"PO-Revision-Date: 2023-10-22 15:03+0000\n"
+"POT-Creation-Date: 2023-11-05 14:09+0000\n"
+"PO-Revision-Date: 2023-11-05 14:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: crm_module
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__name
-msgid " prospecting Satge"
-msgstr "Étape de prospection"
 
 #. module: crm_module
 #: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
@@ -37,8 +32,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_module.field_crm_lead__argument_ids
 #: model:ir.model.fields,field_description:crm_module.field_product_product__argument_ids
 #: model:ir.model.fields,field_description:crm_module.field_product_template__argument_ids
-msgid "Argumentaire"
-msgstr "Argumentaire"
+msgid "Argument"
+msgstr ""
 
 #. module: crm_module
 #: model:ir.model,name:crm_module.model_crm_stage
@@ -47,19 +42,26 @@ msgstr "Étapes CRM"
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__create_uid
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__create_uid
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__create_date
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__create_date
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__description
+#: model:ir.model.fields,field_description:crm_module.field_product_product__description
+#: model:ir.model.fields,field_description:crm_module.field_product_template__description
+msgid "Description"
+msgstr ""
+
+#. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__display_name
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__display_name
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -71,13 +73,18 @@ msgid "Email"
 msgstr ""
 
 #. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__final_date
+msgid "Final Date"
+msgstr "Date finale"
+
+#. module: crm_module
 #: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
 msgid "Final closure"
 msgstr "Clôture définitive"
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__id
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__id
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__id
 msgid "ID"
 msgstr ""
 
@@ -89,19 +96,19 @@ msgstr "Est un brouillon"
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument____last_update
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage____last_update
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__write_uid
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__write_uid
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__write_date
-#: model:ir.model.fields,field_description:crm_module.field_stage_stage__write_date
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -111,12 +118,25 @@ msgid "Lead/Opportunity"
 msgstr "Piste/Opportunité"
 
 #. module: crm_module
+#: model:ir.model.fields,help:crm_module.field_crm_lead__partner_id
+msgid ""
+"Linked partner (optional). Usually created when converting the lead. You can"
+" find a partner by its Name, TIN, Email or Internal Reference."
+msgstr ""
+
+#. module: crm_module
 #: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
 msgid "Opportunity"
 msgstr "Opportunité"
 
 #. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.product_template_only_form_view_inherit_l10n_eg_eta_edi
+msgid "Packages"
+msgstr "Paquets"
+
+#. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_crm_lead__phone
+#: model:ir.model.fields,field_description:crm_module.field_res_users__phone
 msgid "Phone"
 msgstr "Téléphone"
 
@@ -124,7 +144,7 @@ msgstr "Téléphone"
 #: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
 #: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
 msgid "Probability"
-msgstr "Taux de succès"
+msgstr "Probabilité"
 
 #. module: crm_module
 #: model:ir.model,name:crm_module.model_product_template
@@ -139,7 +159,7 @@ msgstr "Variante de produit"
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_crm_lead__product
 msgid "Product/Service"
-msgstr "Produit/Service"
+msgstr "Produit/service"
 
 #. module: crm_module
 #: model:ir.ui.menu,name:crm_module.product_menu_catalog
@@ -147,14 +167,24 @@ msgid "Products"
 msgstr "Produits"
 
 #. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__partner_id
 #: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
 #: model_terms:ir.ui.view,arch_db:crm_module.view_crm_lead_form_inherit
 msgid "Prospect"
 msgstr ""
 
 #. module: crm_module
-#: model:ir.model.fields,field_description:crm_module.field_crm_lead__prospecting_stage
-msgid "Prospecting stage"
+#: model_terms:ir.ui.view,arch_db:crm_module.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_module.product_template_only_form_view_inherit_l10n_eg_eta_edi
+msgid "Prospection Stage"
+msgstr "Étape de prospection"
+
+#. module: crm_module
+#: model:ir.model.fields,field_description:crm_module.field_crm_lead__prospection_stage_id
+#: model:ir.model.fields,field_description:crm_module.field_product_product__prospection_stage_id
+#: model:ir.model.fields,field_description:crm_module.field_product_template__prospection_stage_id
+#: model:ir.model.fields,field_description:crm_module.field_prospection_stage__name
+msgid "Prospection stage"
 msgstr "Étape de prospection"
 
 #. module: crm_module
@@ -170,7 +200,12 @@ msgstr ""
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_argument_argument__question_text
 msgid "Question"
-msgstr "Questions"
+msgstr "Question"
+
+#. module: crm_module
+#: model_terms:ir.ui.view,arch_db:crm_module.product_template_only_form_view_inherit_l10n_eg_eta_edi
+msgid "Question & Response"
+msgstr "Questions & Réponses"
 
 #. module: crm_module
 #: model:ir.model.fields,field_description:crm_module.field_crm_lead__replace_id
@@ -194,6 +229,6 @@ msgid "argument.argument"
 msgstr ""
 
 #. module: crm_module
-#: model:ir.model,name:crm_module.model_stage_stage
-msgid "stage.stage"
+#: model:ir.model,name:crm_module.model_prospection_stage
+msgid "prospection.stage"
 msgstr ""

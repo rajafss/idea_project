@@ -1,6 +1,6 @@
 <odoo>
   <data>
-
+<!--      tree view-->
         <record model="ir.ui.view" id="city_list">
             <field name="name">City list</field>
             <field name="model">delegation</field>
@@ -11,8 +11,7 @@
                 </tree>
             </field>
         </record>
-
-
+<!--     form view -->
       <record id="city_view_form" model="ir.ui.view">
         <field name="name">City</field>
         <field name="model">delegation</field>
@@ -27,13 +26,13 @@
             </form>
         </field>
       </record>
-
+     <!-- action window of city view-->
       <record model="ir.actions.act_window" id="delegation_action_window">
           <field name="name">City</field>
           <field name="res_model">delegation</field>
           <field name="view_mode">tree,form</field>
       </record>
-
+     <!--menu of city -->
       <menuitem name="City"
                 id="delegation_menu_1"
                 parent="contacts.res_partner_menu_config"

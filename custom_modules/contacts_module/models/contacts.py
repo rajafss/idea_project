@@ -4,10 +4,16 @@ from odoo import models, fields, api
 class Partner(models.Model):
     _inherit = 'res.partner'
 
+
+
+    # == Business fields
+    # relation one2many with same table res.partner
+    factory_ids = fields.One2many('res.partner','factory')
+
+    factory = fields.Many2one('res.partner', string="Factory name")
+
     category_id = fields.Many2many('res.partner.category', column1='partner_id',
                                    column2='category_id', string='Activité')
-
-
     reason_Social = fields.Char()
     legal_status = fields.Many2one('forme.juridique')
     responsible = fields.Char(string="First manager")
@@ -25,8 +31,6 @@ class Partner(models.Model):
                                ('non exportatrice ', 'Non Totalement exportatrice')])
     code_tva = fields.Char(string="Code TVA")
     product = fields.Char()
-    factory = fields.Char()
-
     participant = fields.Char( string='Country of foreign participant')
     date = fields.Char(string=" Production entry date")
     capital = fields.Integer(string="Share capital in DT" )
@@ -52,7 +56,7 @@ class Partner(models.Model):
     is_industry = fields.Boolean()
 
 
-    # fields of other factory
+    # product fields of another factory
     product_id = fields.Char(string="Product")
 
     # to count the nomber of companies saved in contacts we will create a compute field
@@ -61,12 +65,14 @@ class Partner(models.Model):
     def get_default(self):
         return self.search_count([('is_industry', '=', True)])
 
+    # compute field recalculate the company nomber
     nb_company = fields.Integer(
         compute='_compute_total',
         default=get_default,  # Using the get_default function as the default value
         reverse=True
     )
 
+    # we need this function to calculate the nomber of company saved
     def _compute_total(self):
         for partner in self:
             partner.nb_company = self.search_count([('is_industry', '=', True)])

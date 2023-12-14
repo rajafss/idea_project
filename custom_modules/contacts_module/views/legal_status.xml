@@ -1,6 +1,6 @@
 <odoo>
   <data>
-
+        <!--tree view-->
         <record model="ir.ui.view" id="legal_list">
             <field name="name">Legal Status</field>
             <field name="model">forme.juridique</field>
@@ -11,7 +11,7 @@
             </field>
         </record>
 
-
+        <!--form view-->
       <record id="legal_view_form" model="ir.ui.view">
         <field name="name">Legal Status form</field>
         <field name="model">forme.juridique</field>
@@ -25,13 +25,13 @@
             </form>
         </field>
       </record>
-
+<!--action window of legal status-->
       <record model="ir.actions.act_window" id="legal_action_window">
           <field name="name">Legal Status</field>
           <field name="res_model">forme.juridique</field>
           <field name="view_mode">tree,form</field>
       </record>
-
+<!--menu -->
       <menuitem name="Legal Status"
                 id="forme_juridique_menu_1"
                 parent="contacts.res_partner_menu_config"

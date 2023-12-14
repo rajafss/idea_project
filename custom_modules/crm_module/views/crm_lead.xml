@@ -7,6 +7,8 @@
             <field name="inherit_id" ref="crm.crm_lead_view_form"/>
             <field name="priority" eval="2"/>
             <field name="arch" type="xml">
+<!--                just the administrator can definitively close a prospecting -->
+<!--                we need add groups sale manager here-->
                 <button name="%(crm.crm_lead_lost_action)d" position="attributes">
                     <attribute name="groups">sales_team.group_sale_manager</attribute>
                     <attribute name="string">Final closure</attribute>
@@ -25,6 +27,7 @@
                             <field name="create_date" readonly="1" />
                         </group>
                     </xpath>
+                    <!--     we need context to see the res partner idea form view   -->
                     <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="attributes">
                         <attribute name="string">Prospect</attribute>
                         <attribute name="context">{'form_view_ref':'contacts_module.idea_view_partner_form'}</attribute>
@@ -50,9 +53,6 @@
                     <xpath expr="//group[@name='opportunity_partner']/label[@for='email_from']" position="attributes">
                         <attribute name="invisible">1</attribute>
                     </xpath>
-<!--                    <xpath expr="//group/field[@name='tag_ids']" position="attributes">-->
-<!--                        <attribute name="invisible">1</attribute>-->
-<!--                    </xpath>-->
                     <xpath expr="//group/field[@name='user_id']" position="after">
                         <div class="oe_edit_only d-md-flex align-items-center">
                              <label for="probability"/>
@@ -63,27 +63,34 @@
                             <span class="oe_grey"> %</span>
                         </div>
                     </xpath>
-
                     <xpath expr="//group/field[@name='user_id']" position="attributes">
                         <attribute name="string">Prospector</attribute>
                     </xpath>
                     <xpath expr="//field[@name='lead_properties']" position="attributes">
                         <attribute name="invisible">1</attribute>
                     </xpath>
-<!--                    <xpath expr="//page[@name='internal_notes']" position="inside">-->
-<!--                        <field name="description"/>-->
-<!--                    </xpath>-->
                     <xpath expr="//page[@name='internal_notes']" position="after">
-                    <page name="Argument" >
+                        <page name="Question &amp; Response" >
                             <field name="argument_ids" widget="one2many">
                                 <tree editable="bottom">
                                     <field name="question_text"/>
                                     <field name="response_text"/>
                                 </tree>
                             </field>
-                    </page>
-                </xpath>
-
+                        </page>
+                        <page name="prospection_stage" string="Prospection Stage">
+                            <field name="prospection_stage_id">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="name"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </xpath>
                 </data>
             </field>
         </record>
@@ -137,23 +144,6 @@
         <menuitem id="product_menu_catalog"
             name="Products" parent="crm.crm_menu_sales" action="sale.product_template_action"
             sequence="5"/>
-
-
-<!--        <menuitem-->
-<!--        id="res_partner_menu_customer"-->
-<!--        name="Prospects"-->
-<!--        parent="crm.res_partner_menu_customer"-->
-<!--        action="contacts_module.action_partner_idea_form"-->
-<!--        sequence="5"/>-->
-
-<!--         <record id="menu_customers_inherit" model="ir.ui.menu">-->
-<!--            <attribute name="name">Prospects</attribute>-->
-<!--            <field name="parent_id" ref="crm.crm_menu_sales" />-->
-<!--            <field name="action" ref="contacts_module.action_partner_idea_form" />-->
-<!--             <field name="groups_id" eval="[(4, ref('base.group_user'))]" />-->
-<!--        </record>-->
-
-
 
          <record id="menu_customers_inherit" model="ir.ui.menu">
             <field name="name">Prospects</field>

@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
+<!--        herite the product template form view -->
+<!--        see the page prospection stage and script and questions response-->
         <record id="product_template_only_form_view_inherit_l10n_eg_eta_edi" model="ir.ui.view">
             <field name="name">product.template.form.l10n_eg_eta_edi</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
-<!--                <xpath expr="//page[@name='sales']" position="attributes">-->
-<!--                  <attribute name="invisible">1</attribute>-->
-<!--                </xpath>-->
-<!--                <xpath expr="//page[@name='purchase']" position="attributes">-->
-<!--                  <attribute name="invisible">1</attribute>-->
-<!--                </xpath>-->
-<!--                <xpath expr="//page[@name='variants']" position="attributes">-->
-<!--                  <attribute name="invisible">1</attribute>-->
-<!--                </xpath>-->
-
+                <xpath expr="//page[@name='sales']" position="attributes">
+                  <attribute name="string">Packages</attribute>
+                </xpath>
+                <xpath expr="//page[@name='purchase']" position="attributes">
+                  <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='invoicing']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
                 <xpath expr="//page[@name='general_information']" position="after">
-                    <page name="Description">
+                    <page name="Script">
                         <field name="description"/>
                     </page>
-                    <page name="Argument" >
+                    <page name="prospection_stage" string="Prospection Stage">
+                        <field name="prospection_stage_id">
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="question_response" string="Question &amp; Response" >
                         <field name="argument_ids" widget="one2many">
-                            <tree string="Argumentatire" editable="bottom">
+                            <tree editable="bottom">
                                 <field name="question_text"/>
                                 <field name="response_text"/>
                             </tree>
@@ -34,7 +46,6 @@
                         </field>
                     </page>
                 </xpath>
-
             </field>
         </record>
     </data>

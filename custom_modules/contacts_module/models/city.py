@@ -8,6 +8,3 @@ class City(models.Model):
 
     city = fields.Char()
     state_id = fields.Many2one('res.country.state')
-
-    # string = "Délégation"
-    # string = "Gouvernorat"

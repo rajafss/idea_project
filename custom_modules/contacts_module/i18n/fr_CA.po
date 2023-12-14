@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-22 14:47+0000\n"
-"PO-Revision-Date: 2023-10-22 14:47+0000\n"
+"POT-Creation-Date: 2023-11-05 16:03+0000\n"
+"PO-Revision-Date: 2023-11-05 16:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -49,31 +49,55 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid ""
 "<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
-"                                <b>Address</b>\n"
-"                            </span>"
+"                                                <b>Address</b>\n"
+"                                            </span>"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                        <b>Address</b>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                    <b>Address</b>\n"
+"                                </span>"
 msgstr ""
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid ""
 "A partner with the same <span><span class=\"o_vat_label\">Company Registry</span>\n"
-"                </span> already exists ("
+"                        </span> already exists ("
 msgstr ""
+"A partner with the same <span><span class=\"o_vat_label\">Company Registry</span>\n"
+"                </span> already exists ("
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid ""
 "A partner with the same <span><span class=\"o_vat_label\">Tax ID</span>\n"
-"                </span> already exists ("
+"                        </span> already exists ("
 msgstr ""
+"A partner with the same <span><span class=\"o_vat_label\">Tax ID</span>\n"
+"                </span> already exists ("
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Activity"
+msgstr "Activité"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__category_id
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__category_id
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Activité"
-msgstr "Activité"
+msgstr ""
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -215,15 +239,22 @@ msgid "Email Seat"
 msgstr "Email Siège"
 
 #. module: contacts_module
-#: model:ir.model.fields,field_description:contacts_module.field_res_partner__factory
-#: model:ir.model.fields,field_description:contacts_module.field_res_users__factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__factory_ids
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__factory_ids
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Factory"
-msgstr "Usine"
+msgstr "Usines"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Factory address"
 msgstr "Adresse d'usine"
+
+#. module: contacts_module
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__factory
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__factory
+msgid "Factory name"
+msgstr "Nom d'Usine"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__zip_factory
@@ -325,11 +356,6 @@ msgid "Meetings"
 msgstr ""
 
 #. module: contacts_module
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
-msgid "Misc"
-msgstr ""
-
-#. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__mobile_factory
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__mobile_factory
 msgid "Mobile Factory"
@@ -391,7 +417,9 @@ msgstr "Téléphone"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__product
+#: model:ir.model.fields,field_description:contacts_module.field_res_partner__product_id
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__product
+#: model:ir.model.fields,field_description:contacts_module.field_res_users__product_id
 msgid "Product"
 msgstr "Produit"
 
@@ -402,11 +430,6 @@ msgid "Production entry date"
 msgstr "Date d'entrée en production"
 
 #. module: contacts_module
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
-msgid "Purchase"
-msgstr ""
-
-#. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__reason_Social
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__reason_Social
 msgid "Reason Social"
@@ -414,23 +437,8 @@ msgstr "Raison sociale"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
-msgid "Reference"
-msgstr ""
-
-#. module: contacts_module
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Registered companies:"
 msgstr "Entreprises enregistrées :"
-
-#. module: contacts_module
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
-msgid "Sales"
-msgstr "Ventes"
-
-#. module: contacts_module
-#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
-msgid "Sales & Purchases"
-msgstr "Ventes & achats"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.view_search_partner
@@ -503,7 +511,7 @@ msgstr "Nom du contact"
 #. module: contacts_module
 #: model:ir.model,name:contacts_module.model_delegation
 msgid "delegation"
-msgstr ""
+msgstr "délégation"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form

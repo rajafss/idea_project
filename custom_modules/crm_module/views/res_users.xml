@@ -1,18 +1,19 @@
 
 <odoo>
     <data>
+<!--        herite the user form view -->
         <record model="ir.ui.view" id="view_totp_form">
             <field name="name">user form: add totp status</field>
             <field name="model">res.users</field>
             <field name="inherit_id" ref="base.view_users_form"/>
             <field name="arch" type="xml">
                 <data>
-                     <field name="login" position="after">
-                     <group>
-                         <field name="phone"/>
-                        <field name="replace_id"/>
-                     </group>
-                </field>
+                    <field name="login" position="after">
+                        <group>
+                             <field name="phone"/>
+                             <field name="replace_id"/>
+                       </group>
+                    </field>
                 </data>
             </field>
         </record>
