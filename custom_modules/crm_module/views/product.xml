@@ -21,18 +21,6 @@
                     <page name="Script">
                         <field name="description"/>
                     </page>
-                    <page name="prospection_stage" string="Prospection Stage">
-                        <field name="prospection_stage_id">
-                            <tree>
-                                <field name="name"/>
-                            </tree>
-                            <form>
-                                <group>
-                                    <field name="name"/>
-                                </group>
-                            </form>
-                        </field>
-                    </page>
                     <page name="question_response" string="Question &amp; Response" >
                         <field name="argument_ids" widget="one2many">
                             <tree editable="bottom">
@@ -42,6 +30,18 @@
                             <form>
                                  <field name="question_text" />
                                 <field name="response_text"/>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="prospection_stage" string="Prospection Stage">
+                        <field name="prospection_stage_id">
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="name"/>
+                                </group>
                             </form>
                         </field>
                     </page>
