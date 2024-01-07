@@ -1,8 +1,5 @@
 from odoo import models, fields, api
 
-
-
-
 class ProductproductArgument(models.Model):
     _inherit = 'product.product'
 

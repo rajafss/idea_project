@@ -104,6 +104,7 @@
                 <data>
                     <xpath expr="//group/field[@name='partner_id']" position="attributes">
                         <attribute name="string">Prospect</attribute>
+                        <attribute name="context">{'form_view_ref':'contacts_module.idea_view_partner_form'}</attribute>
                     </xpath>
                     <xpath expr="//group/field[@name='name']" position="after">
                         <field name="product"/>
@@ -139,8 +140,6 @@
                 </data>
             </field>
         </record>
-
-
         <menuitem id="product_menu_catalog"
             name="Products" parent="crm.crm_menu_sales" action="sale.product_template_action"
             sequence="5"/>
@@ -152,6 +151,11 @@
              <field name="groups_id" eval="[(4, ref('base.group_user'))]" />
              <!-- Replace with your custom action reference -->
         </record>
+
+        <menuitem
+        id="crm.res_partner_menu_customer"
+        action="base.action_partner_form"
+        active="False"/>
 
     </data>
 </odoo>

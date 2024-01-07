@@ -3,13 +3,14 @@ from odoo import models, fields, api
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
+    ################################################
+    #Fields
+    ################################################
     replace_id = fields.Many2one('res.users' , string="Replace", related="user_id.replace_id")
-
 
     product = fields.Many2one(
         'product.template',
         string="Product/Service")
-
 
     argument_ids = fields.Many2many("argument.argument" ,string="Argument" , related="product.argument_ids")
 
@@ -34,10 +35,12 @@ class CrmLead(models.Model):
 
     # we need a function compute to genrate email and phone of partner
     def _compute_email_from(self):
+        """To get the default email of contacts,,, we get just the email factory"""
         for lead in self:
             lead.email_p = lead.partner_id.email_factory
 
     def _compute_phone(self):
+        """To get the default phone of contacts,,, we get just the phone factory"""
         for lead in self:
             lead.phone = lead.partner_id.phone_factory
 

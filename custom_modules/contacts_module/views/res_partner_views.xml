@@ -55,9 +55,8 @@
                                     <field name="responsible"/>
                                     <field name="title"/>
                                     <field name="sector"/>
-                                    <field name="category_id" string="Activity" widget="many2many_tags"
-                                           options="{'color_field': 'color', 'no_create_edit': True}"
-                                           placeholder='e.g. "B2B", "VIP", "Consulting", ...'/>
+                                    <field name="category_id" widget="many2many_tags"
+                                           options="{'color_field': 'color', 'no_create_edit': True}"/>
                                     <field name="active" invisible="1"/>
                                     <field name="parent_id" invisible="1"/>
                             </group>
@@ -135,7 +134,6 @@
                         <page string="Contacts &amp; Address" name="contact_addresses">
                             <field name="child_ids"
                                    mode="kanban">
-<!--                                   context="{'default_parent_id': active_id,'default_user_id': user_id,}"-->
                                 <kanban>
                                     <field name="user_id"/>
                                     <field name="id"/>
@@ -190,23 +188,6 @@
                                     <sheet>
                                         <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
                                         <field name="parent_id" invisible="1"/>
-<!--                                        <div class="text-muted oe_edit_only">-->
-<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'contact')]}">-->
-<!--                                                <span>Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).</span>-->
-<!--                                            </p>-->
-<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'invoice')]}">-->
-<!--                                                <span>Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.</span>-->
-<!--                                            </p>-->
-<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'delivery')]}">-->
-<!--                                                <span>Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.</span>-->
-<!--                                            </p>-->
-<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'private')]}">-->
-<!--                                                <span>Private addresses are only visible by authorized users and contain sensitive data (employee home addresses, ...).</span>-->
-<!--                                            </p>-->
-<!--                                            <p class="mb-0" attrs="{'invisible': [('type', '!=', 'other')]}">-->
-<!--                                                <span>Other address for the company (e.g. subsidiary, ...)</span>-->
-<!--                                            </p>-->
-<!--                                        </div>-->
                                         <hr/>
                                         <group>
                                             <group>
@@ -215,17 +196,6 @@
                                                     attrs="{'invisible': [('type','!=', 'contact')]}"/>
                                                 <field name="function"
                                                     attrs="{'invisible': [('type','!=', 'contact')]}"/>
-<!--                                                <label for="street" string="Address" attrs="{'invisible': [('type','=', 'contact')]}"/>-->
-<!--                                                <div attrs="{'invisible': [('type','=', 'contact')]}">-->
-<!--                                                    <div class="o_address_format" name="div_address">-->
-<!--                                                        <field name="street" placeholder="Street..." class="o_address_street"/>-->
-<!--                                                        <field name="street2" placeholder="Street 2..." class="o_address_street"/>-->
-<!--                                                        <field name="city" placeholder="City" class="o_address_city"/>-->
-<!--                                                        <field name="state_id" class="o_address_state" placeholder="State" options="{'no_open': True, 'no_quick_create': True}" context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}"/>-->
-<!--                                                        <field name="zip" placeholder="ZIP" class="o_address_zip"/>-->
-<!--                                                        <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
                                             </group>
                                             <group>
                                                 <field name="email" widget="email"/>
@@ -245,8 +215,6 @@
                         </page>
                         <page string="Factory" name="autre_usine">
                             <field name="factory_ids" widget="one2many">
-<!--                                   context="{'form_view_ref':'contacts_module.idea_view_partner_form'}"-->
-
                                 <tree>
                                     <field name="factory"/>
                                     <field name="responsible"/>
@@ -330,7 +298,7 @@
                     <field name="state_seat" optional="hide" readonly="1"/>
                     <field name="country_id" optional="show" readonly="1"/>
                     <field name="code_tva"  optional="hide" readonly="1"/>
-                    <field name="category_id" string="Activity" options="{'color_field': 'color', 'no_create_edit': True}"
+                    <field name="category_id" options="{'color_field': 'color', 'no_create_edit': True}"
                            optional="hide" widget="many2many_tags"/>
                      <field name="parent_id" invisible="1" readonly="1"/>
                     <field name="active" invisible="1"/>
@@ -368,28 +336,23 @@
                     <field name="id"/>
                     <field name="color"/>
                     <field name="display_name"/>
-<!--                    <field name="title"/>-->
                     <field name="email_seat"/>
                     <field name="email_factory"/>
                     <field name="parent_id"/>
                     <field name="is_company"/>
-<!--                    <field name="function"/>-->
                     <field name="phone_seat"/>
                     <field name="phone_factory"/>
                     <field name="street_seat"/>
                     <field name="street_factory"/>
-<!--                    <field name="street2"/>-->
                     <field name="zip_seat"/>
                     <field name="zip_factory"/>
                     <field name="city_factory"/>
                     <field name="country_id"/>
-<!--                    <field name="mobile"/>-->
                     <field name="opportunity_count" groups="sales_team.group_sale_salesman"/>
                     <field name="meeting_count"/>
                     <field name="state_factory"/>
                     <field name="category_id"/>
                     <field name="avatar_128"/>
-<!--                    <field name="type"/>-->
                     <field name="activity_state"/>
                     <field name="active"/>
                     <templates>
@@ -417,10 +380,6 @@
                                         <ul>
                                             <li t-if="record.parent_id.raw_value ">
                                                 <field name="parent_id"/></li>
-<!--                                            <li t-elif="!record.parent_id.raw_value and record.function.raw_value">-->
-<!--                                                <field name="function"/></li>-->
-<!--                                            <li t-elif="record.parent_id.raw_value and record.function.raw_value">-->
-<!--                                                <field name="function"/> at <field name="parent_id"/></li>-->
                                             <li t-if="record.city_factory.raw_value or record.country_id.raw_value">
                                                 <t t-if="record.city_factory.raw_value"><field name="city_factory"/><t t-if="record.country_id.raw_value">, </t></t>
                                                 <t t-if="record.country_id.raw_value"><field name="country_id"/></t>
@@ -432,12 +391,12 @@
                                             <li t-if="record.phone_factory.raw_value" class="o_text_overflow">
                                                 <field name="phone_factory"/></li>
                                         </ul>
-<!--                                        <div class="o_kanban_tags_section oe_kanban_partner_categories">-->
-<!--                                            <span class="oe_kanban_list_many2many">-->
-<!--                                                 <field name="category_id" widget="many2many_tags"-->
-<!--                                                        options="{'color_field': 'color'}"/>-->
-<!--                                            </span>-->
-<!--                                        </div>-->
+                                        <div class="o_kanban_tags_section oe_kanban_partner_categories">
+                                            <span class="oe_kanban_list_many2many">
+                                                 <field name="category_id" widget="many2many_tags"
+                                                        options="{'color_field': 'color'}"/>
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="o_kanban_record_bottom">
                                         <div class="oe_kanban_bottom_left">
@@ -514,12 +473,6 @@
         parent="contacts.menu_contacts"
         action="action_partner_idea_form"
         sequence = "1"/>
-
-         <menuitem id="menu_partner_category_form"
-            action="base.action_partner_category_form"
-            name="Company activity"
-            parent="contacts.res_partner_menu_config"/>
-
 
     </data>
 </odoo>

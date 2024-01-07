@@ -13,7 +13,7 @@ class Partner(models.Model):
     factory = fields.Many2one('res.partner', string="Factory name")
 
     category_id = fields.Many2many('res.partner.category', column1='partner_id',
-                                   column2='category_id', string='Activité')
+                                   column2='category_id')
     reason_Social = fields.Char()
     legal_status = fields.Many2one('forme.juridique')
     responsible = fields.Char(string="First manager")

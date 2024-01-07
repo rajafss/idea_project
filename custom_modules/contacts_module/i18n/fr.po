@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-05 16:03+0000\n"
-"PO-Revision-Date: 2023-11-05 16:03+0000\n"
+"POT-Creation-Date: 2024-01-06 21:16+0000\n"
+"PO-Revision-Date: 2024-01-06 21:16+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__date
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__date
 msgid " Production entry date"
-msgstr "Date d'entrée en production"
+msgstr "Date"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -75,8 +75,6 @@ msgid ""
 "A partner with the same <span><span class=\"o_vat_label\">Company Registry</span>\n"
 "                        </span> already exists ("
 msgstr ""
-"A partner with the same <span><span class=\"o_vat_label\">Company Registry</span>\n"
-"                </span> already exists ("
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -84,20 +82,18 @@ msgid ""
 "A partner with the same <span><span class=\"o_vat_label\">Tax ID</span>\n"
 "                        </span> already exists ("
 msgstr ""
-"A partner with the same <span><span class=\"o_vat_label\">Tax ID</span>\n"
-"                </span> already exists ("
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Activity"
-msgstr "Activité"
+msgstr ""
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__category_id
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__category_id
 msgid "Activité"
-msgstr ""
+msgstr "Activité"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -131,12 +127,12 @@ msgstr "Délégation d'usine"
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__city_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__city_seat
 msgid "City Seat"
-msgstr "Délégation de Siège"
+msgstr "Délégation du siège"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Code Postal"
-msgstr "Code postal"
+msgstr ""
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__code_tva
@@ -147,7 +143,7 @@ msgstr ""
 #. module: contacts_module
 #: model:ir.ui.menu,name:contacts_module.menu_partner_category_form
 msgid "Company activity"
-msgstr "Activité de société"
+msgstr "Activité de la société"
 
 #. module: contacts_module
 #: model:ir.model,name:contacts_module.model_res_partner
@@ -177,13 +173,13 @@ msgstr "Contacts & Adresse"
 #. module: contacts_module
 #: model:res.groups,name:contacts_module.management_contacts_group
 msgid "Contacts Industry Configuration"
-msgstr ""
+msgstr "Configuration de l'industrie des contacts"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__country_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__country_seat
 msgid "Country Seat"
-msgstr "Pays de siège"
+msgstr "Pays du siège"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__participant
@@ -195,13 +191,13 @@ msgstr "Pays du participant étranger"
 #: model:ir.model.fields,field_description:contacts_module.field_delegation__create_uid
 #: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_delegation__create_date
 #: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé sur"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_partner_tree
@@ -219,7 +215,7 @@ msgstr "Régime"
 #: model:ir.model.fields,field_description:contacts_module.field_delegation__display_name
 #: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__display_name
 msgid "Display Name"
-msgstr "Afficher un nom"
+msgstr "Afficher un nom
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -230,20 +226,20 @@ msgstr ""
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__email_factory
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__email_factory
 msgid "Email Factory"
-msgstr "Email Usine"
+msgstr "E-mail d'usine"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__email_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__email_seat
 msgid "Email Seat"
-msgstr "Email Siège"
+msgstr "E-mail du siège"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__factory_ids
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__factory_ids
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Factory"
-msgstr "Usines"
+msgstr "Usine"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -254,7 +250,7 @@ msgstr "Adresse d'usine"
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__factory
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__factory
 msgid "Factory name"
-msgstr "Nom d'Usine"
+msgstr "Nom d'usine"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__zip_factory
@@ -272,7 +268,7 @@ msgstr "Fax d'usine"
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__fax_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__fax_seat
 msgid "Fax Seat"
-msgstr "Fax de siège"
+msgstr "Fax du siège"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__responsible
@@ -328,19 +324,19 @@ msgstr "Emploi"
 #: model:ir.model.fields,field_description:contacts_module.field_delegation____last_update
 #: model:ir.model.fields,field_description:contacts_module.field_forme_juridique____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_delegation__write_uid
 #: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière mise à jour par"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_delegation__write_date
 #: model:ir.model.fields,field_description:contacts_module.field_forme_juridique__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière mise à jour le"
 
 #. module: contacts_module
 #: model:ir.actions.act_window,name:contacts_module.legal_action_window
@@ -365,7 +361,7 @@ msgstr "Mobile d'usine"
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__mobile_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__mobile_seat
 msgid "Mobile Seat"
-msgstr "Mobile de Siège"
+msgstr "Mobile du Siège "
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -386,12 +382,17 @@ msgstr ""
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Notes Internes..."
-msgstr ""
+msgstr "Notes Internes..."
+
+#. module: contacts_module
+#: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
+msgid "Opportunities"
+msgstr "Opportunités"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Partners"
-msgstr ""
+msgstr "Les partenaires"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -408,12 +409,12 @@ msgstr "Téléphone d'usine"
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__phone_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__phone_seat
 msgid "Phone Seat"
-msgstr "Téléphone de siège"
+msgstr "Téléphone du siège"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Phone:"
-msgstr "Téléphone"
+msgstr "Téléphone:"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__product
@@ -484,19 +485,19 @@ msgstr "Gouvernorat du Siège"
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__street_factory
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__street_factory
 msgid "Street Factory"
-msgstr "Adresse d'usine"
+msgstr "Rue de l'usine"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__street_seat
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__street_seat
 msgid "Street Seat"
-msgstr "Adresse du siège"
+msgstr "Rue du Siège"
 
 #. module: contacts_module
 #: model:ir.model.fields,field_description:contacts_module.field_res_partner__title
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__title
 msgid "Title"
-msgstr "Civilité"
+msgstr "Titre"
 
 #. module: contacts_module
 #: model:ir.model.fields.selection,name:contacts_module.selection__res_partner__diet__exportatrice
@@ -511,7 +512,7 @@ msgstr "Nom du contact"
 #. module: contacts_module
 #: model:ir.model,name:contacts_module.model_delegation
 msgid "delegation"
-msgstr "délégation"
+msgstr "Délégation"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
@@ -546,9 +547,44 @@ msgstr ""
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "seat"
-msgstr "Siège"
+msgstr ""
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "seat address"
 msgstr "Adresse du siège"
+
+#. module: base
+#: model:ir.actions.act_window,name:base.action_partner_category_form
+#: model_terms:ir.ui.view,arch_db:base.view_partner_category_list
+msgid "Contact Tags"
+msgstr "Activité de la société"
+
+#. module: base
+#: model:ir.model.fields,field_description:base.field_res_partner__category_id
+#: model:ir.model.fields,field_description:base.field_res_users__category_id
+msgid "Tags"
+msgstr "Activité"
+
+#. module: base
+#: model_terms:ir.ui.view,arch_db:base.view_partner_category_form
+msgid "Contact Tag"
+msgstr "Activité de la société"
+
+#. module: contacts
+#: model:ir.ui.menu,name:contacts.menu_partner_category_form
+msgid "Contact Tags"
+msgstr "Activités de la société"
+
+#. module: contacts
+#: model:ir.ui.menu,name:contacts.menu_country_state_partner
+msgid "Fed. States"
+msgstr "Gouvernorat"
+
+#. module: base
+#: model:ir.actions.act_window,name:base.action_country_state
+msgid "Fed. States"
+msgstr "Gouvernorat"
+
+
+
